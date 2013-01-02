@@ -1,10 +1,10 @@
 # fizzbuzz
 
-A Clojure library designed to ... well, that part is up to you.
+Just because it's fun…
 
 ## Usage
 
-FIXME
+See <code>src/fizzbuzz/core.clj</code>
 
 ## License
 

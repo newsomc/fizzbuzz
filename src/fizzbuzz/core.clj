@@ -19,6 +19,8 @@
 
 (filter fizz-buzz? nums)
 
+
+;; Separate solution...doesn't quite work yet.
 (defn check-recur [n]
   (do
     (fizz-buzz? n)
