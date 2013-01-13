@@ -9,7 +9,7 @@
 (defn by-five? [x]
   (= (mod x 5) 0))
 
-(defn fizz-buzz?
+(defn fizz-buzz
   "Tells us whether to print fizz, buzz or both!"
   [x]
   (cond
@@ -17,13 +17,32 @@
    (by-three? x) (println x " Fizz")
    (by-five?  x) (println x " Buzz")))
 
-(filter fizz-buzz? nums)
+;; filter
+(defn fizz-buzz-filter [x]
+  (filter fizz-buzz nums))
+
+(fizz-buzz-filter nums)
+
+;; TODO: map
+
+;; TODO: reduce/map; reduce/filter
+
+;; doseq
+(defn fizz-buzz-doseq [x]
+  (doseq [i x]
+    (fizz-buzz i)))
+
+(fizz-buzz-doseq nums)
+
+;; loop + recur
+(defn fizz-buzz-recur []
+(loop [i 1]  
+  (when (< i 101)    
+    (fizz-buzz i)
+    (recur (inc i)))))
+
+(fizz-buzz-recur)
 
 
-;; Separate solution...doesn't quite work yet.
-(defn check-recur [n]
-  (do
-    (fizz-buzz? n)
-    (check-recur (dec n))))
 
-(check-recur 100)
+
